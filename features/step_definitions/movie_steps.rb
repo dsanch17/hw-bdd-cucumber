@@ -14,7 +14,11 @@ end
 Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
   #  ensure that that e1 occurs before e2.
   #  page.body is the entire content of the page as a string.
-  page.body.should =~ /.*#{e1}.*#{e2}.*/
+  pageText = page.body.tr('+','')
+  e1Position = pageText.index(e1)
+  e2Position = pageText.index(e2)
+  
+  e1Position.should < e2Position
 end
 
 # Make it easier to express checking or unchecking several boxes at once
