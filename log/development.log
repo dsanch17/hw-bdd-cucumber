@@ -549,3 +549,46 @@ Started GET "/assets/application.self.js?body=1" for ::1 at 2015-07-23 13:57:16 
   [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
   [1m[35m (6.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
   [1m[36m (8.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36m (9.2ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (6.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (8.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (6.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (8.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36m (9.3ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (8.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (7.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (6.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (8.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+  [1m[36m (11.8ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "rating" varchar(255), "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (10.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (6.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (6.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
+  [1m[36m (7.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+
+
+Started GET "/assets/rails.png" for 152.15.113.7 at 2015-11-05 18:46:34 +0000
+
+
+Started GET "/movies" for 152.15.113.7 at 2015-11-05 18:46:37 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (50.0ms)
+Completed 200 OK in 283ms (Views: 254.3ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.7 at 2015-11-05 18:46:38 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.7 at 2015-11-05 18:46:38 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.7 at 2015-11-05 18:46:38 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.7 at 2015-11-05 18:46:38 +0000
