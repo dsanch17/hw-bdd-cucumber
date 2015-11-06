@@ -41,6 +41,11 @@ end
 
 Then /I should see all the movies/ do
   # Make sure that all the movies in the app are visible in the table
-  numAllMovies = Movie.all.count
-  numAllMovies.should == 10
+  rating_array = Movie.all_ratings.split(" ")
+  rating_array.each do |rating|
+    step(%Q{the "#{rating}" checkbox within the page should be checked})
+    
+  end
+  
+  Movie.all.count.should == 10
 end
