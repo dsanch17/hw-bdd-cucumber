@@ -24,7 +24,7 @@ Background: movies have been added to database
 Scenario: restrict to movies with 'PG' or 'R' ratings
   
   Given I check the following ratings: PG,R
-  And I uncheck the following ratings: G,PG-13,NC-17
+  Given I uncheck the following ratings: G,PG-13,NC-17
   When I press "Refresh"
   Then I should see "The Incredibles"
   And I should see "Raiders of the Lost Ark"
